@@ -34,7 +34,7 @@ body{
   </head>
 
   <body>
-
+  <form id="form-container" class="form-container">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -48,7 +48,9 @@ body{
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-
+          <label for="input">Wikipedia : </label>
+          		<input type="text" id="input" value="">
+          		<button id="submit-btn">Search</button>
           </ul>
         </div>
       </div>
@@ -60,6 +62,10 @@ body{
           <ul class="nav nav-sidebar">
             <li class="active"><a href="index.php">Home</a></li>
             <li><a href="login.php">Login Register</a></li>
+            <li class="wikipedia-container">
+        <h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
+        <ul id="wikipedia-links">Type in an address above and find relevant Wikipedia articles here!</ul>
+    	</li>
           </ul>
                   </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -90,11 +96,12 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
-
+</form>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="jquery.min.js"></script>
+     <script src="script.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
   </body>
